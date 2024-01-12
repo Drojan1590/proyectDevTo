@@ -1,0 +1,32 @@
+.sideCardContainer {
+    display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+    .sideCardContainer {
+        display: block; /* Oculta el elemento en dispositivos con un ancho de pantalla de 767 píxeles o menos (por ejemplo, tabletas y móviles) */
+    }
+}
+
+.sideCard {
+    min-width: 230px;
+    max-width: 325px;
+    height: 512px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sideCard p {
+    margin: 5px 0px;
+}
+
+.sideCard .linkAndCommentSection:not(:last-child) {
+    border-bottom: 1px solid #f5f5f5;
+}
+
