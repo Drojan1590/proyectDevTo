@@ -27,11 +27,13 @@
 img.fullWidth {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   padding-left: -20px;
-
-  @media (min-width: 768px) {
-      border-radius: 10px 10px 0 0;
+}
+@media (min-width: 768px) {
+  img.fullWidth {
+    border-radius: 10px 10px 0 0;
   }
 }
 
@@ -40,8 +42,10 @@ img.fullWidth {
   background-color: #fff;
   margin-bottom: 10px;
   border-radius: 10px;
-  @media (min-width: 1024px) {
-      padding: 20px;
+}
+@media (min-width: 1024px) {
+  .juniorDevSectionPadding {
+    padding: 20px;
   }
 }
 
@@ -73,12 +77,6 @@ img.fullWidth {
   font-weight: 300;
 }
 
-.paddingOnDesktop {
-  @media (min-width: 1024px) {
-      padding-left: 40px;
-  }
-}
-
 .emoji-section {
   display: flex;
   justify-content: space-between;
@@ -95,8 +93,10 @@ img.fullWidth {
 .mainTitle {
   font-size: 20px;
   margin-top: 10px;
-  @media (min-width: 640px) {
-      font-size: 30px;
+}
+@media (min-width: 640px) {
+  .mainTitle {
+    font-size: 30px;
   }
 }
 
@@ -121,8 +121,8 @@ img.fullWidth {
 }
 
 .tags:hover {
-  background-color: #71717120;
-  outline: 1.5px solid #71717170;
+  background-color: rgba(113, 113, 113, 0.1254901961);
+  outline: 1.5px solid rgba(113, 113, 113, 0.4392156863);
   border-radius: 5px;
 }
 
@@ -155,14 +155,16 @@ img.fullWidth {
 
 .showOnTabletOnly {
   display: none;
-  @media (min-width: 640px) {
-      display: block;
+}
+@media (min-width: 640px) {
+  .showOnTabletOnly {
+    display: block;
   }
 }
 
-.paddingOnDesktop {
-  @media (min-width: 1024px) {
-      padding-left: 40px;
+@media (min-width: 1024px) {
+  .paddingOnDesktop {
+    padding-left: 40px;
   }
 }
 
