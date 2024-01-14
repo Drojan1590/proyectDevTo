@@ -1,36 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        Iniciar sesión
-                    </div>
-                    <div class="card-body">
-                        <form id="loginForm">
-                            <div class="form-group">
-                                <label for="username">Nombre de usuario:</label>
-                                <input type="text" class="form-control" id="username" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Contraseña:</label>
-                                <input type="password" class="form-control" id="password" required>
-                            </div>
-                            <button type="button" class="btn btn-primary">Iniciar sesión</button>
-                        </form>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clone Dev Community</title>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/asideLeft.css" />
+    <link rel="stylesheet" href="../css/center.css" />
+    <link rel="stylesheet" href="../css/asideRigth.css" />
+  </head>
+  <body>
+    <header>
+      <div class="headerContainer">
+        <section class="hamburgerContainer">
+          <div class="hamburger">
+            <i class="fa-solid fa-bars" style="font-size: 25px"></i>
+          </div>
+          <img
+            src="../img/resized_logo_UQww2soKuUsjaOGNB38o.png"
+            class="logo"
+            alt="logo"
+          />
+          <div class="inputContainer">
+            <input type="text" placeholder="Search..." class="inputNav" /><i
+              class="fa-solid fa-magnifying-glass inputGlass"
+              style="font-size: 20px"
+            ></i>
+          </div>
+        </section>
+        <section class="searchContainer">
+          <div class="search">
+            <i
+              class="fa-solid fa-magnifying-glass glassIcon"
+              style="font-size: 25px"
+            ></i>
+          </div>
+
+          <div class="logInHeader">
+            <a href="/">Log in</a>
+          </div>
+          <a href="/" id="createAccountHeader">Create account</a>
+        </section>
+      </div>
+    </header>
+    <main>
+      <!--Contenido Principal-->
+      <div class="mainContainer">
+        <!--Contenido Izquierdo-->
+        <aside class="asideLeft">
+          <section class="logInBox">
+            <h2 class="titleLogIn">
+              DEV Community is a community of 1,192,404 amazing developers
+            </h2>
+            <p>
+              We&#39;re a place where coders share, stay up-to-date and grow
+              their careers.
+            </p>
+            <div class="logInButtons">
+              <a href="/" id="createAccountBtn">Create account</a>
+              <a href="/" id="logInAside">Log In</a>
             </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+          </section>
+          <nav class="asideNav">
+            <ul>
+              <li>
+                <a href="/"><i class="fa-solid fa-house"></i>Home</a>
+              </li>
+              <li>
+                <a href="/"><i class="fa-solid fa-microphone"></i>Podcasts</a>
+              </li>
+              <li>
+                <a href="/"><i class="fa-solid fa-video"></i>Video</a>
+              </li>
+              <li>
+                <a href="/"><i class="fa-solid fa-tag"></i>Tags</a>
+              </li>
+              <li>
+                <a href="/"><i class="fa-regular fa-lightbulb"></i>FAQ</a>
+              </li>
+              <li>
+                <a href="/"
+                  ><i class="fa-solid fa-bag-shopping"></i>Forem Shop</a
+                >
+              </li>
+              <li>
+                <a href="/"><i class="fa-brands fa-dev"></i>About</a>
+              </li>
+              <li>
+                <a href="/"><i class="fa-solid fa-circle-notch"></i>Contact</a>
+              </li>
+              <li>
+                <a href="/"><i class="fa-solid fa-book-open"></i>Guides</a>
+              </li>
+              <li>
+                <a href="/"
+                  ><i class="fa-regular fa-face-grimace"></i>Software
+                  comparisons</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <section class="popularTags">
+            <div class="popular">
+              <h2 class="titleLogIn">Popular Tags</h2>
+              <ul>
+                #webdev
+              </ul>
+              <ul>
+                #javascript
+              </ul>
+              <ul>
+                #programming
+              </ul>
+              <ul>
+                #beginners
+              </ul>
+              <ul>
+                #tutorial
+              </ul>
+              <ul>
+                #react
+              </ul>
+              <ul>
+                #python
+              </ul>
+              <ul>
+                #discuss
+              </ul>
+              <ul>
+                #productivity
+              </ul>
+              <ul>
+                #devops
+              </ul>
+              <ul>
+                #aws
+              </ul>
+              <ul>
+                #career
+              </ul>
+              <ul>
+                #opensource
+              </ul>
+              <ul>
+                #css
+              </ul>
+              <ul>
+                #news
+              </ul>
+              <ul>
+                #ai
+              </ul>
+              <ul>
+                #node
+              </ul>
+              <ul>
+                #html
+              </ul>
+              <ul>
+                #typescript
+              </ul>
+              <ul>
+                #codenewbie
+              </ul>
+              <ul>
+                #cloud
+              </ul>
+              <ul>
+                #testing
+              </ul>
+              <ul>
+                #java
+              </ul>
+              <ul>
+                #learning
+              </ul>
+              <ul>
+                #api
+              </ul>
+              <ul>
+                #database
+              </ul>
+              <ul>
+                #github
+              </ul>
+              <ul>
+                #security
+              </ul>
+              <ul>
+                #php
+              </ul>
+              <ul>
+                #android
+              </ul>
+            </div>
+          </section>
+          <section class="box1">
+            <div class="dots">
+              <p>DEV Community ...</p>
+            </div>
+
+            <h2 class="titleLogIn">
+              Discover the Benefits of DEV Organization Accounts!
+            </h2>
+            <p>
+              Explore the world of DEV Organization Accounts and unlock valuable
+              features to boost your online presence. Showcase your brand with
+              organization branding, engage with your audience, and gain
+              insights with advanced analytics.
+            </p>
+            <div class="logInButtons">
+              <a href="/" id="createAccountBtn"> Get started today!</a>
+            </div>
+          </section>
+        </aside>
+        <!--Contenido central-->
+        <section class="juniorCard">
+          <div class="middleNav">
+            <a href="#"><strong>Relevant</strong></a>
+            <a href="#">Latest </a>
+            <a href="#">Top </a>
+          </div>
+          <div id="card-wrapper">
+          </div>         
+        </section>
+        <!--Contenido Derecho-->
+        <section class="sideCardContainer">
+          <div class="sideCard">
+            <p class="cardTitle">#discuss</p>
+            <div class="linkAndCommentSection">
+              <a
+                href="https://dev.to/scofieldidehen/sam-altman-corporate-collateral-damage-52oc"
+                class="sideCardLink"
+              >
+                <p>Sam Altman: Corporate Collateral Damage?</p>
+                <p class="sideCardComment">2 comments</p>
+              </a>
+            </div>
+            <div class="linkAndCommentSection">
+              <a
+                href="https://dev.to/mainarthur/remote-vs-hybrid-vs-office-3k78"
+                class="sideCardLink"
+              >
+                <p>Remote vs Hybrid vs Office</p>
+                <p class="sideCardComment">4 comments</p>
+              </a>
+            </div>
+            <div class="linkAndCommentSection">
+              <a
+                href="https://dev.to/mukeshkuiry/what-is-distributed-systems-1ig3"
+                class="sideCardLink"
+              >
+                <p>What is Distributed systems?</p>
+                <p class="sideCardComment">2 comments</p>
+              </a>
+            </div>
+          </div>
+          <div class="sideCard">
+            <p class="cardTitle">#watercooler</p>
+            <div class="linkAndCommentSection">
+              <a
+                href="https://dev.to/mainarthur/remote-vs-hybrid-vs-office-3k78"
+                class="sideCardLink"
+              >
+                <p>Remote vs Hybrid vs Office 🤔</p>
+                <p class="sideCardComment">4 comments</p>
+              </a>
+            </div>
+
+            <div class="linkAndCommentSection">
+              <a
+                href="https://dev.to/devteam/caption-this-2iij"
+                class="sideCardLink"
+              >
+                <p>Meme Monday 😆</p>
+                <p class="sideCardComment">5 comments</p>
+              </a>
+            </div>
+
+            <div class="linkAndCommentSection">
+              <a
+                href="https://dev.to/chukwuma1976/how-do-you-stay-fit-as-a-busy-tech-professional-345a"
+                class="sideCardLink"
+              >
+                <p>How Do You Stay Fit As A Busy Tech Professional?</p>
+                <p class="sideCardComment">4 comments</p>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
