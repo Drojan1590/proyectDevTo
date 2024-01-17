@@ -59,15 +59,18 @@ let contenidoField = document.getElementById("contenido")
 let btnPublish = document.getElementById("subir-post")
 // Se crea una funcion que extraiga los valores y los convierta en un objeto
 btnPublish.addEventListener("click", async() => {
-    let imagen = imagenField.value
+    /*let imagen = imagenField.value
     let titulo = tituloField.value
     let contenido = contenidoField.value
 
     let post = { fechaFormateada, nombre, avatar, imagen, titulo, contenido,tags}
     let result = await savePost(post);
-    console.log(result);
-
-}) 
+    console.log(result);*/
+    imagenField.value = " ";
+    tituloField.value = " ";
+    currentContent.value = " ";
+    contenidoField.innerText = " ";
+  }) 
 
 // funcion para guardar el post en la base de datos
 const savePost = async (post) => {
@@ -81,148 +84,3 @@ const savePost = async (post) => {
     let data = await response
     return data
 }
-
-// array que almacena los objetos
-let postEntries = []
-// funcion para obtener el objeto de la base de datos
-const getAllPost = async () => {
-  let response = await fetch(
-    "https://mi-proyecto-1-388513-default-rtdb.firebaseio.com/posts/.json"
-  )
-  let data = await response.json();
-  let transformedData = Object.entries(data).reduce((accum, current) => {
-    return [...accum, { key: current[0], ...current[1] }];
-  }, []);
-  postEntries = transformedData;
-  
-  printCardPost(postEntries)
-  
-}
-// funcion para crear una card del post
-const createPostCard = (postData) => {
-  let {fechaFormateada, nombre, avatar, imagen, titulo, tags} = postData;
-
-  let cardPost = document.createElement("div")
-
-  let imagenPost = document.createElement("img")
-  imagenPost.classList.add("fullWidth")
-  imagenPost.src = imagen
-  imagenPost.alt = "imagen del post"
-
-  let divAuthor = document.createElement("div")
-  divAuthor.classList.add("juniorDevSectionPadding")
-
-  let asideAuthor = document.createElement("aside")
-
-  let divProfile = document.createElement("div")
-  divProfile.classList.add("profileInfo")
-
-  let imgAvatar = document.createElement("img")
-  imgAvatar.classList.add("profileImage")
-  imgAvatar.src = avatar
-  imgAvatar.alt = "profile picture of a guy smiling"
-
-  let divName = document.createElement("div")
-  divName.classList.add("column")
-
-  let nameAuthor = document.createElement("h3")
-  nameAuthor.classList.add("profileName")
-  nameAuthor.innerText = nombre
-
-  let fechaPost = document.createElement("h4")
-  fechaPost.classList.add("profile-subtitle")
-  fechaPost.innerText = fechaFormateada
-
-  let divContent = document.createElement("div")
-  divContent.classList.add("paddingOnDesktop")
-
-  let titlePost = document.createElement("h1")
-  titlePost.classList.add("mainTitle")
-  titlePost.innerText = titulo
-
-  let asideTag = document.createElement("div")
-  asideTag.classList.add("d-flex", "gap-3", "flex-wrap")
-  tags.forEach((tag) => {
-    asideTag.innerHTML =
-    asideTag.innerHTML +
-      `
-    <span class="badge text-bg-info">${tag}</span>
-    `;
-  });
-  
-/*
-  let divEmoji = document.createElement("div")
-  divEmoji.classList.add("emoji-section")
-
-  let emoji = document.createElement("div")
-  emoji.classList.add("setOfEmojis")
-
-  let emoji1 = document.createElement("p")
-  emoji1.innerText = "&#128151";
-
-  let emoji2 = document.createElement("p")
-  emoji2.innerText = "&#129321";
-  
-  let emoji3 = document.createElement("p")
-  emoji3.innerText = "&#129330";
-
-  let emoji4 = document.createElement("p")
-  emoji4.innerText= "&#128293";
-
-  let emojiTextCantidad = document.createElement("p")
-  emojiTextCantidad.classList.add("emojiText")
-  emojiTextCantidad.style.marginLeft= "10px";
-  emojiTextCantidad.innerText = "&#128172" + "93"
-
-  let emojiTextComments = document.createElement("p")
-  emojiTextComments.classList.add("emojiText", "showOnTabletOnly")
-  emojiTextComments.style.marginLeft = "10px"
-  emojiTextComments.innerText = "comments"
-
-  let divBookmark =  document.createElement("div")
-  divBookmark.classList.add("bookmarkSection")
-  divBookmark.innerText = "4 min read"
-
-  let imgBookmark = document.createElement("img")
-  imgBookmark.src = "../img/bookmark.png"
-  imgBookmark.alt = "bookmark icon"
-  imgBookmark.style.width = "15px"
-  imgBookmark.style.height = "15px"
-
-  divBookmark.append(imgBookmark)
-  */
-
-  //emoji.append(emoji1, emoji2, emoji3, emoji4, emojiTextCantidad, emojiTextComments)
-
-  //divEmoji.append(emoji, divBookmark)
-
-  //asideTag.append(tagPost,tagPost2,tagPost3,tagPost4)
-
-  divContent.append(titlePost, asideTag/*, divEmoji*/)
-
-  divName.append(nameAuthor, fechaPost)
-
-  divProfile.append(imgAvatar, divName)
-
-  asideAuthor.append(divProfile)
-
-  divAuthor.append(asideAuthor,divContent)
-
-  cardPost.append(imagenPost, divAuthor)
-
-  //return cardPost
-  console.log(cardPost)
-}
-
-const printCardPost = async(postsArray) => {
-  let postWrapper = document.getElementById("card-wrapper")
-  postWrapper.innerHTML = " ";
-  postsArray.forEach((post) => {
-    let postCard = createPostCard(post)
-    postWrapper.append(postCard)
-  })
-}
-
-
-getAllPost();
-

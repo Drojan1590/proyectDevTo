@@ -16,13 +16,13 @@
           <div class="hamburger">
             <i class="fa-solid fa-bars" style="font-size: 25px"></i>
           </div>
-          <img
+          <a href="/"><img
             src="../img/resized_logo_UQww2soKuUsjaOGNB38o.png"
             class="logo"
             alt="logo"
-          />
+          /></a>
           <div class="inputContainer">
-            <input type="text" placeholder="Search..." class="inputNav" /><i
+            <input  id="filter-by-name" type="text" placeholder="Search..." class="inputNav" /><i
               class="fa-solid fa-magnifying-glass inputGlass"
               style="font-size: 20px"
             ></i>
@@ -37,9 +37,9 @@
           </div>
 
           <div class="logInHeader">
-            <a href="/">Log in</a>
+            <a href="./views/login.html">Log in</a>
           </div>
-          <a href="/" id="createAccountHeader">Create account</a>
+          <a href="./views/createCuenta.html" id="createAccountHeader">Create account</a>
         </section>
       </div>
     </header>
@@ -57,8 +57,8 @@
               their careers.
             </p>
             <div class="logInButtons">
-              <a href="/" id="createAccountBtn">Create account</a>
-              <a href="/" id="logInAside">Log In</a>
+              <a href="./views/createCuenta.html" id="createAccountBtn">Create account</a>
+              <a href="./views/login.html" id="logInAside">Log In</a>
             </div>
           </section>
           <nav class="asideNav">
@@ -217,9 +217,9 @@
         <!--Contenido central-->
         <section class="juniorCard">
           <div class="middleNav">
-            <a href="#"><strong>Relevant</strong></a>
-            <a href="#">Latest </a>
-            <a href="#">Top </a>
+            <a id="filter-relevant" ><strong>Relevant</strong></a>
+            <a id="filter-by-fecha" >Latest </a>
+            <a id="filter-top" >Top </a>
           </div>
           <div id="card-wrapper">
           </div>         
@@ -291,6 +291,7 @@
         </section>
       </div>
     </main>
-    <script src="./js/main.js"></script>
+    <script src="js/get.js"></script>
+
   </body>
 </html>
